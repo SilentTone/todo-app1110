@@ -52,10 +52,6 @@ export default function TodoApp() {
 
   const visibleTodos = filterTodos(todos, filter)
 
-  if (todos.length > 100) {
-  useState(0)
-  }
-
   return (
     <div>
       <TodoForm onAdd={handleAdd} />
