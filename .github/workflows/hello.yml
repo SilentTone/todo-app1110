@@ -12,7 +12,11 @@ jobs:
     needs: prepare
     runs-on: ubuntu-latest
     steps:
-      - run: echo "ビルド"
+      - uses: actions/checkout@v7
+      - name: package.json の名前を表示
+        run: |
+          cat package.jsn
+          node -e "console.log(require('./package.json').name)"
   check:
     needs: prepare
     runs-on: ubuntu-latest
