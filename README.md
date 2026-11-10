@@ -81,3 +81,10 @@ npm run start   # ビルド結果を起動
 | 7 | [07_github_branch.md](docs/phase1/07_github_branch.md) | GitHub連携・ブランチ・PR体験 |
 
 Phase 2（コマ8〜）からは、この TODO アプリに Jest と React Testing Library でテストを書いていきます。
+
+## CI でチェックしていること
+
+- `npm run lint` — ESLint（`--max-warnings=0` で警告も失敗扱い）
+- `npm run build` — Next.js の本番ビルド
+
+PR（main 向け）と main への push のたびに `.github/workflows/ci.yml` が自動実行されます。
